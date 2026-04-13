@@ -1,5 +1,7 @@
 # Adversary Forge
 
+![CI](https://github.com/Brainfeed-1996/adversary-forge/actions/workflows/ci.yml/badge.svg)
+
 AI red-team and defense evaluation framework for LLM applications and agentic systems.
 
 Adversary Forge is a security evaluation platform designed to test language-model applications, tool-using agents, memory systems, and workflow automations against realistic attack scenarios.
@@ -15,14 +17,29 @@ Early flagship build phase with:
 - replayable JSON scenarios
 - scenario registry loader
 - evaluation core
-- runner with JSON report output
+- runner with JSON and HTML report output
 - ADR and methodology docs
 - CI and contribution templates
 
 ## Evaluation model
 
 ```text
-scenario pack -> target adapter -> execution harness -> trace capture -> evaluator -> report output
+scenario pack
+   |
+   v
+target adapter
+   |
+   v
+execution harness
+   |
+   v
+trace capture
+   |
+   v
+evaluator
+   |
+   v
+report output
 ```
 
 ## Core capabilities
@@ -65,7 +82,7 @@ adversary-forge/
 
 ### Near term
 
-- add HTML report generation
+- add richer HTML reporting
 - support richer target adapters
 - support historical run storage
 - introduce scenario metadata versioning
