@@ -8,6 +8,23 @@ Adversary Forge is a security evaluation platform designed to test language-mode
 
 AI systems are increasingly connected to tools, data sources, and decision loops. That makes them valuable and dangerous. Adversary Forge exists to make those systems measurable under adversarial pressure.
 
+## Current status
+
+Early flagship build phase with:
+
+- replayable JSON scenarios
+- scenario registry loader
+- evaluation core
+- runner with JSON report output
+- ADR and methodology docs
+- CI and contribution templates
+
+## Evaluation model
+
+```text
+scenario pack -> target adapter -> execution harness -> trace capture -> evaluator -> report output
+```
+
 ## Core capabilities
 
 - prompt injection test suites
@@ -19,18 +36,46 @@ AI systems are increasingly connected to tools, data sources, and decision loops
 - comparative model and agent evaluation
 - red team and blue team workflows
 
-## System design
+## Repository structure
 
-- scenario registry
-- execution harness
-- target adapters for apps, agents, and APIs
-- evaluator engine
-- scoring and reporting pipeline
-- dashboard and benchmark viewer
+```text
+adversary-forge/
+  apps/
+    runner/
+    dashboard/
+    reports/
+  packages/
+    scenario-registry/
+    evaluator-core/
+  scenarios/
+  docs/
+```
 
 ## Documentation
 
-See docs/ for architecture, evaluation methodology, threat model, and roadmap.
+- docs/architecture.md
+- docs/methodology.md
+- docs/threat-model.md
+- docs/benchmarking.md
+- docs/adr-001-replayable-scenarios.md
+- docs/scenario-format.md
+- docs/reporting.md
+
+## Roadmap
+
+### Near term
+
+- add HTML report generation
+- support richer target adapters
+- support historical run storage
+- introduce scenario metadata versioning
+
+### Mid term
+
+- benchmark dashboards
+- comparative target runs
+- trace viewers
+- policy regression packs
 
 ## License
 
