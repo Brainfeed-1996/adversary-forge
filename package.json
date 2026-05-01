@@ -1,0 +1,15 @@
+{
+  "name": "adversary-forge",
+  "private": true,
+  "version": "0.1.0",
+  "description": "AI red-team and defense evaluation framework",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "echo build placeholders",
+    "test": "echo test placeholders",
+    "lint": "echo lint placeholders"
+  }
+}
